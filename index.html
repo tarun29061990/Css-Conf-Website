@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>All About CSS Conf</title>
+		<meta charset="utf8">
+		<meta name="description" content="CSS Conference" />
+		<meta name="author" content="Tarun Chaudhary">
+		<meta name="keywords" content="css,cssconf,cssconf.eu,html5,csstalk,talks,conference,JavaScript,grid,validate" />
+		<!-- Optimized mobile viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="shortcut icon" href="images/css-favico.png">
+		<!-- CSS -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="index.css">
+		
+	</head>
+	<body>
+		<header>
+			CSS CONF 2014
+		</header>
+		<section>
+			<ul id="main-body">
+				<script type="text/template" id="main-view">
+					<li class="tile">
+						<div class="left">
+							<p class="speaker"><%=speaker%></p>
+							<p class="title"><%=title%></p>
+							<div class="social-icons">
+								<a class="v-align-base" href="<%=slides%>" target="_blank"><img width="50" height="50" title="slides" src="images/ppt.png" /></a>
+								<a class="v-align-base" href="<%=related_website%>" target="_blank"><img width="50" height="50" title="website" src="images/website.png" /></a>
+								<a class="v-align-base" href="<%=github%>" target="_blank"><img width="50" height="50" title="github" src="images/github.png" /></a>
+								<div class="tweet-btn">
+									<a href="https://twitter.com/intent/tweet?screen_name=<%=twitter%>" class="twitter-mention-button" data-size="large" data-related="<%=twitter%>" data-dnt="true">Tweet to @<%=twitter%>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="video">
+								<% if (video){ %>
+									<object width="560" height="315">
+										<param name="movie" value="http://www.youtube.com/v/<%= video%>?version=3&amp;hl=en_GB"></param>
+										<param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+										<embed src="http://www.youtube.com/v/<%=video%>?version=3&amp;hl=en_GB" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed>
+									</object>
+								<% }else{ %>
+									<img width="560" height="315" src="images/youtube_error.png" />
+								<% } %>
+							</div>
+						</div>
+					</li>
+				</script>
+			</ul>
+			<a class="more-links" target="_blank" href="http://youtube.com/playlist?list=PL37ZVnwpeshGi0vwS7HNUvsj8_vcNzQZk">Check out the CSS conference videos from 2013</a>
+		</section>
+
+		<footer>
+			Created by <a target="_blank" href="http://curioustechie.in"> Tarun Chaudhary </a>
+		</footer>	
+		<script type="text/javascript" src="scripts/underscore.js"></script>
+		<script type="text/javascript" src="scripts/css-conf.js"></script>
+		<script type="text/javascript">
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+		</script>
+	</body>
+</html>
